@@ -1,5 +1,6 @@
 <?php
 require_once '../partials/header.php';
+require_once '../vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 
 //Catching values submitted by user
 if(isset($_POST['register']))
@@ -47,8 +48,42 @@ if(isset($_POST['register']))
         $msgs[] = "Registration Successfully Done..";
     }
     
+
     //email the user
-    
+/*
+$mail = new PHPMailer;
+
+$mail->isSMTP();
+$mail->SMTPDebug = 2;
+$mail->Debugoutput = 'html';
+$mail->Host = 'smtp.gmail.com';                      // Specify main and backup SMTP servers
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = "treasurer.ieee.eusb@gmail.com";                 // SMTP username
+$mail->Password = ",./;'[]";                           // SMTP password
+$mail->SMTPSecure = 'tls';                            // Enable TLS encryption, `ssl` also accepted
+$mail->Port =  587;                                  // TCP port to connect to
+
+$mail->setFrom('no-reply@example.com', 'Ashfaq_ecommerce');
+$mail->addAddress($email,$user);     // Add a recipient
+$mail->isHTML();                                  // Set email format to HTML
+
+$mail->Subject = 'Activation Link';
+$mail->Body    = ' 
+<p>Hello '. $user .'</p>
+<p>
+    <a href="http://localhost/php_ecommerceMe/admin/activate.php?token=' . $activation_token . ' ">Click to activate</a>
+</p>
+';
+
+$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+
+if(!$mail->send()) {
+    $errors[] = 'Message could not be sent.';
+    $errors[] = 'Mailer Error: ' . $mail->ErrorInfo;
+} else {
+    $msgs[] = 'Message has been sent';
+}
+ */       
     
     //Show message to user
 }

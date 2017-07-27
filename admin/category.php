@@ -4,8 +4,6 @@ if (empty($_SESSION) || empty($_SESSION['id']) || empty($_SESSION['username'])) 
 	header('Location: index.php');
 }
 
-?>
-
 <?php
 require_once 'adminheader.php';
 
@@ -14,11 +12,14 @@ require_once 'adminheader.php';
 <div class="container">
     <div class="row">
 		<?php require_once 'admin_sidebar.php';?>
-        <div class=" col-sm-8">
-            <div class="alert alert-success">
-                <p>You are logged in as <?php echo $_SESSION['username']; ?>.</p>
 
-            </div>
+        <div class=" col-sm-8">
+
+           <div class="well">
+           		<a href="add_category.php" class="btn btn-success">Add Categories</a>
+           </div>
+
+
         </div>
     </div>
 </div>
