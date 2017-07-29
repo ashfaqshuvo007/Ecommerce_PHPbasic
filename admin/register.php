@@ -2,6 +2,11 @@
 require_once '../partials/header.php';
 require_once '../vendor/phpmailer/phpmailer/PHPMailerAutoload.php';
 
+if(!empty($_SESSION['id']) && !empty($_SESSION['username']))
+{
+    header('Location: dashboard.php');
+}
+
 //Catching values submitted by user
 if(isset($_POST['register']))
 {

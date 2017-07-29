@@ -107,10 +107,12 @@ require_once 'adminheader.php';
                     <input type="text" name="category_name" class="form-control" required="" value="<?php echo $data['category_name']; ?>">
                 </div>
                 <div class="form-group">
-                    <label for="category_photo">Category Photo</label>
+                    <label for="category_photo">Category Photo</label>&nbsp;
                     <img src="../uploads/category/<?php echo $data['category_photo']; ?>" alt="cat_image" width="100">
+                    <br><br>
                     <input type="file" name="category_photo" class="form-control">
                 </div>
+                
                 <div class="form-group">
                     <button type="submit" class="btn btn-success" name="category">Edit Category</button>
                 </div>

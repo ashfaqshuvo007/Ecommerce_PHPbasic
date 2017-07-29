@@ -2,6 +2,12 @@
 
 <?php
 require_once '../partials/header.php';
+require_once '../vendor/autoload.php';
+
+if(isset($_SESSION['id'],$_SESSION['username']))
+{
+    header('Location: dashboard.php');
+}
 
 if (isset($_POST['login'])) {
 	$user = trim(strtolower($_POST['username']));
@@ -77,6 +83,8 @@ if (isset($_POST['login'])) {
                 <div class="form-group">
                     <button href="login.php" type="submit" name="login" class="btn btn-success">Login</button>
                     <a href="register.php" class="btn btn-danger">Register</a>
+                    &nbsp;
+                    <a href="forgot_password.php">forgot your password?</a>
                 </div>
             </form>
         </div>
