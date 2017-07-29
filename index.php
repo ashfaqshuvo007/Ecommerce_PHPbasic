@@ -1,5 +1,6 @@
 <?php
 require_once 'partials/header.php';
+require_once 'connection.php';
 ?>
 <!-- Page Content -->
 <div class="container">

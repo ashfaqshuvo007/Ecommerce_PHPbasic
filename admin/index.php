@@ -2,6 +2,7 @@
 
 <?php
 require_once '../partials/header.php';
+
 require_once '../vendor/autoload.php';
 
 if(isset($_SESSION['id'],$_SESSION['username']))

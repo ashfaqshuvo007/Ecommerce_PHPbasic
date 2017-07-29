@@ -1,4 +1,4 @@
-<?php require_once '../connection.php';?>
+<?php require_once 'connection.php';?>
 <?php require_once '../vendor/autoload.php';?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,10 +13,10 @@
         <title>Ecommerce-PHP_basic</title>
 
         <!-- Bootstrap Core CSS -->
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <!-- Custom CSS -->
-        <link href="../css/app.css" rel="stylesheet">
+        <link href="css/app.css" rel="stylesheet">
 
         
     </head>
