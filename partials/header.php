@@ -1,5 +1,5 @@
-<?php require_once 'connection.php';?>
-<?php require_once '../vendor/autoload.php';?>
+<?php require_once 'connection.php'; ?>
+<?php require_once '../vendor/autoload.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +10,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
 
-        <title>Ecommerce-PHP_basic</title>
+        <title>Pixels :: Camera Store</title>
 
         <!-- Bootstrap Core CSS -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,7 +18,9 @@
         <!-- Custom CSS -->
         <link href="css/app.css" rel="stylesheet">
 
-        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
     </head>
 
     <body>
@@ -34,14 +36,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#">Ecommerce</a>
+                    <a class="navbar-brand" href="index.php">CAMERA SHOP</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li>
-                            <a href="Shop.php">Shop</a>
-                        </li>
+                        
                         <li>
                             <a href="Cart.php">Cart</a>
                         </li>

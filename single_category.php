@@ -1,12 +1,6 @@
 <?php
 require_once 'partials/header.php';
 require_once 'connection.php';
-
-session_start();
-
-$query = $con->prepare('SELECT * FROM `products`');
-$query->execute();
-$products = $query->fetchAll();
 ?>
 <!-- Page Content -->
 <div class="container">
@@ -16,14 +10,12 @@ $products = $query->fetchAll();
         <?php require_once 'partials/sidebar.php'; ?>
 
         <div class="col-md-9">
-             <?php if(isset($_SESSION['msg'])) {?>
-            <div class="alert alert-success">               
-                <p><?php echo $_SESSION['msg'] ;?></p>                 
-            </div>            
-            <?php unset($_SESSION['msg']);}?>
-
-            <?php require_once 'partials/carousal.php'; ?>
-
+            <?php
+            $query = $con->prepare('SELECT * FROM `products` WHERE `category_id` = :id ');
+            $query->bindValue('id', $_GET['id'], PDO::PARAM_INT);
+            $query->execute();
+            $products = $query->fetchAll();
+            ?>
             <div class="row">
                 <?php foreach ($products as $v_product) { ?>
                     <div class="col-sm-4 col-lg-4 col-md-4">

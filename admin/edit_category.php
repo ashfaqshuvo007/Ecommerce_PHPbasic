@@ -83,7 +83,7 @@ require_once 'adminheader.php';
         <?php require_once 'admin_sidebar.php'; ?>
 
         <div class=" col-sm-8">
-            <h2>Add Category</h2>
+            <h2>Edit Category</h2>
 
             <?php if (!empty($errors)) { ?>
                 <div class="alert alert-danger">

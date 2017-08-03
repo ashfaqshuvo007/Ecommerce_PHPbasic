@@ -78,7 +78,7 @@ if (isset($_POST['edit_product'])) {
 
         if ($query->rowCount() === 1) {
             $msgs[] = 'Product updated successfully.';
-            
+
             //TO show updated Values
             $query_p = $con->prepare('SELECT * FROM `products` WHERE `id` = :id ');
             $query_p->bindValue('id', $_GET['id'], PDO::PARAM_INT);
@@ -97,26 +97,26 @@ require_once 'adminheader.php';
 <!-- Page Content -->
 <div class="container">
     <div class="row">
-<?php require_once 'admin_sidebar.php'; ?>
+        <?php require_once 'admin_sidebar.php'; ?>
 
         <div class=" col-sm-8">
             <h2>Edit Product</h2>
 
-<?php if (!empty($errors)) { ?>
+            <?php if (!empty($errors)) { ?>
                 <div class="alert alert-danger">
-    <?php foreach ($errors as $v_error) { ?>
+                    <?php foreach ($errors as $v_error) { ?>
                         <p><?php echo $v_error; ?></p>
-                <?php } ?>
+                    <?php } ?>
                 </div>
-                <?php } ?>
+            <?php } ?>
 
-                <?php if (!empty($msgs)) { ?>
+            <?php if (!empty($msgs)) { ?>
                 <div class="alert alert-success">
-                <?php foreach ($msgs as $v_msg) { ?>
+                    <?php foreach ($msgs as $v_msg) { ?>
                         <p><?php echo $v_msg; ?></p>
-                <?php } ?>
+                    <?php } ?>
                 </div>
-                <?php } ?>
+            <?php } ?>
 
             <form action="" method="post" enctype="multipart/form-data">
                 <div class="form-group">
@@ -133,9 +133,9 @@ require_once 'adminheader.php';
                                     <label for="category_name">Category</label>
                                     <select name="category_id" class="form-control">
                                         <option>Select</option>
-<?php foreach ($categories as $v_category) { ?>
-                                                <option value="<?php echo $v_category['id']; ?>"><?php echo $v_category['category_name']; ?></option>
-<?php } ?>
+                <?php //foreach ($categories as $v_category) { ?>
+                <option value="<?php //echo $v_category['id']; ?>"><?php// echo $v_category['category_name']; ?></option>
+                <?php// } ?>
                                     </select>                   
                                 </div>-->
                 <div class="form-group">
